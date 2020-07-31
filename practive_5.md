@@ -38,5 +38,14 @@ flume5_9.sinks.k1.channel = c1
 
 ![](https://imgur.com/ISjo0Ve.png)
 
-
+3. Создать поверх данных в hdfs таблицу через которую можно просмотреть полученные данные.
+```
+create external table les_6 
+(text string)
+stored as sequencefile
+location '/flume/student5_9/'
+```
+```
+select * from les_6;
+```
 
